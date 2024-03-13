@@ -32,12 +32,12 @@ module.exports = {
 
   getInspiration: (req, res) => {
     const inspiration = [
-      "Be a content creator!",
-      "Create the next big social media app!!!",
-      "Go to the gym asap:)",
-      "Dream big!",
+      "Be yourself!",
+      "You will do on to do great things!!!",
+      "Go to the gym!",
+      "Just do it!",
       "Dream bigger!!!",
-      "Get a new credit card",
+      "Get a new credit card!",
     ];
 
     // choose random inspiration
@@ -46,8 +46,38 @@ module.exports = {
 
     res.status(200).send(randomInspiration);
   },
-};
 
-// git add .
-// git commit -m "message"
-// copy and paste second box on github*
+  getEncouragement: (req, res) => {
+    const encouragement = [
+      "Be the best you!",
+      "You're doing great",
+      "You will be sucessful",
+      "Dream big!",
+      "You can do it!",
+      "You got this dude!",
+    ];
+
+    // choose random encouragement
+    let encouragementIndex = Math.floor(Math.random() * encouragement.length);
+    let randomEncouragement = encouragement[encouragementIndex];
+
+    res.status(200).send(randomEncouragement);
+  },
+
+  getHelp: (req, res) => {
+    const help = [
+      "Google is your friend!",
+      "Books have all of the knowledge you desire!",
+      "The internet is your greatest asset!",
+      "Financial literacy in needed to get the most life can offer!",
+      "Chat GPT was made for a reason!",
+      "Read a book!",
+    ];
+
+    // choose random help
+    let helpIndex = Math.floor(Math.random() * help.length);
+    let randomHelp = help[helpIndex];
+
+    res.status(200).send(randomHelp);
+  },
+};

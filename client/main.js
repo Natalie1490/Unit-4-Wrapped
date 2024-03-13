@@ -30,3 +30,25 @@ const getInspiration = () => {
 };
 
 inspoBtn.addEventListener("click", getInspiration);
+
+const encouragementBtn = document.getElementById("encouragementButton");
+
+const getEncouragement = () => {
+  axios.get("http://localhost:4000/api/encouragement/").then((res) => {
+    const data = res.data;
+    alert(data);
+  });
+};
+
+encouragementBtn.addEventListener("click", getEncouragement);
+
+const helpBtn = document.getElementById("helpButton");
+
+const getHelp = () => {
+  axios.get("http://localhost:4000/api/help/").then((res) => {
+    const data = res.data;
+    alert(data);
+  });
+};
+
+helpBtn.addEventListener("click", getHelp);
